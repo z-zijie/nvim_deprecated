@@ -3,6 +3,8 @@
 ### Requirements
 1. neovim
 2. git
+3. GCC >8
+4. Clang >7
 
 ### How to install
 ```sh
