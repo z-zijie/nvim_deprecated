@@ -1,6 +1,11 @@
-# nvim
+# The Config for neovim
 
-**configuration for neovim**
+### Requirements
+1. neovim
+2. git
 
-## This repo contains some config for neovim.
-## It is used to construct a personal workspace more conveniently.
+### How to install
+```sh
+cd ~/.config/
+git clone https://github.com/z-zijie/nvim.git
+```
