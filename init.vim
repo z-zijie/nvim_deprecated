@@ -43,6 +43,9 @@ let mapleader = " "
 " [Personal Feature] Fast saving
 nmap <LEADER>w :w!<CR>
 
+" [PF] Fast Quit
+nmap <LEADER>q :q<CR>
+
 " [PF] :W sudo saves the file
 " (For handing the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <BAR> edit!
@@ -213,3 +216,7 @@ endfun
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
+
+" [PF] Go to File under cursor in new tabpage
+nmap <LEADER>gf <C-w>gf
+
