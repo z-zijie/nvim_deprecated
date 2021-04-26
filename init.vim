@@ -11,6 +11,18 @@
 "	=> Status line
 "	=> Editing mappings
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" == Source some external configuration files ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Source the list of plugins
+source pluglist.vim
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,6 +96,12 @@ set number
 " Show relativenumber
 set relativenumber
 
+" Show cursorline
+set cursorline
+
+" Show command
+set showcmd
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " 	== Colors and Fonts ==
@@ -98,7 +116,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-	colorscheme peaksea
+	colorscheme onedark
 catch
 endtry
 
