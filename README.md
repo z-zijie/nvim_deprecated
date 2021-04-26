@@ -15,7 +15,7 @@ git clone https://github.com/z-zijie/nvim.git
 ```
 *After cloned the repo, we should prepare environment for YCM*
 #### Install YCM on Linux 64-bit
- - Install YCM plugin(By :PlugInstall)
+ - Install YCM plugin(by`:PlugInstall`)
  - Install cmake, vim and python
     ```sh
     sudo apt install build-essential cmake vim-nox python3-dev
