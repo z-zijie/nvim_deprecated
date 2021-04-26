@@ -6,6 +6,10 @@
 "	=> General
 "	=> User interface
 "	=> Colors and Fonts
+"	=> Text, tab and indent related
+"	=> Moving around, tabs, windows and buffers
+"	=> Status line
+"	=> Editing mappings
 
 
 
@@ -82,5 +86,112 @@ set relativenumber
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""
-" 	== Colors and Fonts
+" 	== Colors and Fonts ==
 """""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable syntax highlighting
+syntax enable
+
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+endif
+
+try
+	colorscheme desert
+catch
+endtry
+
+set background=dark
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"	== Text, tab and indent related ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai		"Auto indent
+set si		"Smart indent
+set wrap	"Wrap lines
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"   == Moving around, tabs, windows and buffers ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Disable hightlight when <LEADER><CR> is pressed
+map <silent> <LEADER><CR> :noh<CR>
+
+" Smart way to move between windows
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
+" Useful mappings for managing tabs
+map <LEADER>tn :tabnew<CR>
+map <LEADER>to :tabonly<CR>
+map <LEADER>tc :tabclose<CR>
+map <LEADER>tm :tabmove
+map <LEADER>t<LEADER> :tabnext<CR>
+
+" Return to last edit position when opening files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"   == Status line ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Always show the status line
+set laststatus=2
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"   == Editing mappings ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+if has("mac") || has("macunix")
+  nmap <D-j> <M-j>
+  nmap <D-k> <M-k>
+  vmap <D-j> <M-j>
+  vmap <D-k> <M-k>
+endif
+
+" Delete trailing white space on save, useful for some filetypes ;)
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+if has("autocmd")
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+endif
