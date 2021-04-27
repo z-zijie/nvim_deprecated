@@ -22,5 +22,8 @@ Plug 'tpope/vim-fugitive'
 " Surrounding
 "Plug 'tpope/vim-surround'
 
+" Syntax checking
+"Plug 'scrooloose/syntastic'
+
 call plug#end()
 
