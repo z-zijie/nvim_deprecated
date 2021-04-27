@@ -31,4 +31,7 @@ Plug 'airblade/vim-gitgutter'
 " Fuzzy finder
 "Plug 'junegunn/fzf'
 
+" Display the indention levels
+Plug 'yggdroot/indentline'
+
 call plug#end()
