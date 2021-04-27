@@ -47,4 +47,7 @@ Plug 'google/vim-codefmt'
 " Automated bullet list
 Plug 'dkarter/bullets.vim'
 
+" xtabline
+Plug 'mg979/vim-xtabline'
+
 call plug#end()
