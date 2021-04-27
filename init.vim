@@ -20,9 +20,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""
 
 " Source the list of plugins
-source pluglist.vim
-
-
+source ~/.config/nvim/pluglist.vim
+" Source the optional features of some plugins
+source ~/.config/nvim/optionalfeatures.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""
