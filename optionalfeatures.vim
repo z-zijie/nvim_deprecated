@@ -25,7 +25,9 @@ let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""""""""""""""""""""
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" == OPTIONS OF 'code-fmt' ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
   autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
@@ -39,3 +41,13 @@ augroup autoformat_settings
   autocmd FileType rust AutoFormatBuffer rustfmt
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" == OPTIONS OF 'Bullets' ==
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'text',
+    \ 'gitcommit',
+    \ 'scratch'
+    \]

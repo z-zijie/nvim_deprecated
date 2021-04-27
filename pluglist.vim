@@ -44,4 +44,7 @@ Plug 'luochen1990/rainbow'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 
+" Automated bullet list
+Plug 'dkarter/bullets.vim'
+
 call plug#end()
