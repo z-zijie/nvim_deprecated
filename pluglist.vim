@@ -29,7 +29,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Fuzzy finder
-Plug 'junegunn/fzf'
+"Plug 'junegunn/fzf'
 
 call plug#end()
-
