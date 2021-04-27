@@ -16,5 +16,11 @@ Plug 'vim-airline/vim-airline'
 " comment plugin
 Plug 'preservim/nerdcommenter'
 
+" A Git wrapper
+Plug 'tpope/vim-fugitive'
+
+" Surrounding
+"Plug 'tpope/vim-surround'
+
 call plug#end()
 
