@@ -37,4 +37,7 @@ Plug 'yggdroot/indentline'
 " insert/delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
+" Rainbow Parentheses
+Plug 'luochen1990/rainbow'
+
 call plug#end()
