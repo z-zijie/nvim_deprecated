@@ -24,6 +24,10 @@ source ~/.config/nvim/pluglist.vim
 " Source the optional features of some plugins
 source ~/.config/nvim/optionalfeatures.vim
 
+"lua << EOF
+"require'lspconfig'.pyright.setup{}
+"EOF
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 "	== General ==

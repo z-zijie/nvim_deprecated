@@ -50,4 +50,10 @@ Plug 'dkarter/bullets.vim'
 " xtabline
 Plug 'mg979/vim-xtabline'
 
+ "LSP-Config
+":Plug 'neovim/nvim-lspconfig'
+
+ "Compleetion-nvim
+"Plug 'nvim-lua/completion-nvim'
+
 call plug#end()
