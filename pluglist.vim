@@ -8,10 +8,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 
 " Install the code-completion engine
-" Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 
 " Additional Vim syntax highlighting for C++
-" Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'octol/vim-cpp-enhanced-highlight'
 
 " comment plugin
 Plug 'preservim/nerdcommenter'
