@@ -25,5 +25,11 @@ Plug 'tpope/vim-fugitive'
 " Syntax checking
 "Plug 'scrooloose/syntastic'
 
+" Show git diff
+Plug 'airblade/vim-gitgutter'
+
+" Fuzzy finder
+Plug 'junegunn/fzf'
+
 call plug#end()
 
