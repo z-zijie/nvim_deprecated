@@ -7,6 +7,7 @@
 4. Clang
 5. Clangd
 6. Python3
+7. clang-format
 
 ### How to install
 ```sh

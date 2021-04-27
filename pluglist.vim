@@ -40,4 +40,8 @@ Plug 'jiangmiao/auto-pairs'
 " Rainbow Parentheses
 Plug 'luochen1990/rainbow'
 
+" Autoformat
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+
 call plug#end()
