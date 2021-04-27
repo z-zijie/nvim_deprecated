@@ -34,4 +34,7 @@ Plug 'airblade/vim-gitgutter'
 " Display the indention levels
 Plug 'yggdroot/indentline'
 
+" insert/delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
