@@ -56,4 +56,8 @@ Plug 'mg979/vim-xtabline'
  "Compleetion-nvim
 "Plug 'nvim-lua/completion-nvim'
 
+" Plugs for markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Generate table of Contents in markdown
+Plug 'mzlogin/vim-markdown-toc'
 call plug#end()

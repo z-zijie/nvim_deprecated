@@ -19,9 +19,9 @@
 " == Source some external configuration files ==
 """""""""""""""""""""""""""""""""""""""""""""""""
 
-" Source the list of plugins
+" == Source the list of plugins == "
 source ~/.config/nvim/pluglist.vim
-" Source the optional features of some plugins
+" == Source the optional features of some plugins == "
 source ~/.config/nvim/optionalfeatures.vim
 
 "lua << EOF
